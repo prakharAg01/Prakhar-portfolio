@@ -27,7 +27,7 @@ export default function Skills() {
                   className="animate-fade-up"
                   style={{ animationDelay: `${200 + index * 50}ms` }}
                 >
-                  <div className="group h-full p-6 rounded-2xl bg-primary border border-body/10 hover:border-accent/40 shadow-sm transition-all duration-300 hover:-translate-y-2">
+                  <div className="group h-full p-6 rounded-2xl bg-card border border-body/10 hover:border-accent/40 shadow-sm transition-all duration-300 hover:-translate-y-2">
                     
                     {/* Info (Icon Container Removed) */}
                     <div className="flex items-center mb-6">

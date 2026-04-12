@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiGithub, FiExternalLink } from 'react-icons/fi';
+import { FiGithub } from 'react-icons/fi';
 
 import { PROJECTS_DATA } from '../constants/Constants';
 
@@ -48,19 +48,30 @@ export default function Projects() {
           {filteredProjects.length > 0 ? filteredProjects.map((project, index) => (
             <div
               key={project.title}
-              className="group flex flex-col justify-between p-6 rounded-xl bg-primary shadow-sm border border-body/10 hover:border-accent/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300 animate-fade-up"
+              className="group flex flex-col justify-between p-6 rounded-xl bg-card shadow-sm border border-body/10 hover:border-accent/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300 animate-fade-up"
               style={{ animationDelay: `${150 * (index + 1)}ms` }}
             >
               <div>
-                <h3 className="font-display text-2xl font-bold text-heading mb-3 group-hover:text-accent transition-colors">
-                  {project.title}
-                </h3>
+                <div className="flex justify-between items-center mb-4">
+                  <h3 className="font-display text-2xl font-bold text-heading group-hover:text-accent transition-colors">
+                    {project.title}
+                  </h3>
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-body hover:text-accent transition-colors transition-transform hover:scale-110 flex-shrink-0 ml-4"
+                    aria-label="GitHub Repository"
+                  >
+                    <FiGithub size={20} strokeWidth={1.5} />
+                  </a>
+                </div>
                 <p className="text-sm text-body leading-relaxed mb-6">
                   {project.description}
                 </p>
 
                 {/* Tech Stack Badges */}
-                <div className="flex flex-wrap gap-2 mb-8">
+                <div className="flex flex-wrap gap-2">
                   {project.techStack.map((tech, i) => (
                     <span
                       key={i}
@@ -72,26 +83,7 @@ export default function Projects() {
                 </div>
               </div>
 
-              <div className="flex justify-center items-center gap-12 mt-auto border-t border-body/10 pt-5">
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm font-mono font-medium text-body hover:text-accent transition-colors"
-                >
-                  <FiGithub size={20} />
-                  Code
-                </a>
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm font-mono font-medium text-body hover:text-accent transition-colors"
-                >
-                  <FiExternalLink size={20} />
-                  Live Demo
-                </a>
-              </div>
+
             </div>
           )) : (
             <p className="col-span-3 text-center text-body font-mono py-16">

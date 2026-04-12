@@ -7,6 +7,8 @@ import Credentials from "../components/Credentials";
 import Contact from "../components/Contact";
 import { ROLES } from "../constants/Constants";
 
+// Import the icons
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
 export default function Home() {
   const displayedRole = useTypewriter(ROLES);
@@ -29,13 +31,47 @@ export default function Home() {
           <p className="max-w-xl text-sm md:text-base leading-relaxed text-body mt-6 animate-fade-up" style={{ animationDelay: '400ms' }}>
             Computer and Communications Engineering student building robust full-stack applications and exploring the depths of Signal Processing & IoT.
           </p>
+          
           <div className="flex gap-4">
-            <button className="mt-10 px-8 py-4 font-mono text-sm text-primary bg-accent border border-accent rounded hover:bg-accent/80 hover:text-primary transition-colors duration-300 animate-fade-up" style={{ animationDelay: '500ms' }}>
+            <button className="mt-10 px-8 py-4 font-mono font-bold text-sm text-primary bg-accent border border-accent rounded hover:bg-accent/80 hover:text-primary transition-colors duration-300 animate-fade-up" style={{ animationDelay: '500ms' }}>
               Download CV
             </button>
-            <button className="mt-10 px-8 py-4 font-mono text-sm text-accent bg-transparent border border-accent rounded hover:bg-accent/80 hover:text-primary transition-colors duration-300 animate-fade-up" style={{ animationDelay: '500ms' }}>
+            <a 
+              href="#contact" 
+              className="mt-10 px-8 py-4 font-mono text-sm text-accent bg-transparent border border-accent rounded hover:bg-accent/80 hover:text-primary transition-colors duration-300 animate-fade-up inline-block text-center" 
+              style={{ animationDelay: '500ms' }}
+            >
               Let's Talk
-            </button>
+            </a>
+          </div>
+
+          {/* Social Icons Section */}
+          <div className="flex items-center gap-6 mt-8 animate-fade-up" style={{ animationDelay: '600ms' }}>
+            <a 
+              href="https://github.com/yourusername" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-body hover:text-accent transition-colors duration-300"
+              aria-label="GitHub"
+            >
+              <FiGithub size={24} />
+            </a>
+            <a 
+              href="https://linkedin.com/in/yourusername" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-body hover:text-accent transition-colors duration-300"
+              aria-label="LinkedIn"
+            >
+              <FiLinkedin size={24} />
+            </a>
+            <a 
+              href="mailto:prakhar.agrawal@email.com" 
+              className="text-body hover:text-accent transition-colors duration-300"
+              aria-label="Email"
+            >
+              <FiMail size={28} />
+            </a>
           </div>
 
         </div>

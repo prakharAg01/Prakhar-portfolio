@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import BackToTop from "./BackToTop";
 
 export default function MainLayout({ children }) {
     return (
@@ -9,6 +10,7 @@ export default function MainLayout({ children }) {
             <main className="flex-grow">
                 {children}
             </main>
+            <BackToTop />
             <Footer />
         </div>
     );

@@ -6,7 +6,8 @@ html {
 
 @layer base {
   :root {
-    --color-bg-primary: hsl(225 60% 95%);
+    --color-bg-primary: hsl(0 0% 90%);
+    --color-bg-card: hsl(0 0% 95%);
     --color-text-heading: hsl(225 68% 10%);
     --color-text-body: hsl(230 15% 40%);
     --color-accent: hsl(178.7 93.5% 40%);
@@ -14,7 +15,8 @@ html {
   }
 
   .dark {
-    --color-bg-primary: hsl(225 60% 7%);
+    --color-bg-primary: hsl(0, 0%, 0%);
+    --color-bg-card: hsl(0, 0%, 2%);
     --color-text-heading: hsl(225 15.4% 94.9%);
     --color-text-body: hsl(230.6 15.7% 60%);
     --color-accent: hsl(178.7 93.5% 70%);
@@ -35,6 +37,7 @@ html {
 
 @theme {
   --color-primary: var(--color-bg-primary);
+  --color-card: var(--color-bg-card);
   --color-heading: var(--color-text-heading);
   --color-body: var(--color-text-body);
   --color-accent: var(--color-accent);
