@@ -2,6 +2,19 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Sun, Moon } from 'lucide-react';
 
+const API = import.meta.env.VITE_API_BASE_URL || '';
+
+async function downloadFile(url, filename) {
+  const res = await fetch(url);
+  if (!res.ok) return;
+  const blob = await res.blob();
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -48,12 +61,12 @@ const Navbar = () => {
           </button>
 
           {/* Resume Button */}
-          <Link
-            to="/resume"
+          <button
+            onClick={() => downloadFile(`${API}/api/download/resume/pdf`, 'Prakhar_Agrawal_Resume.pdf')}
             className="px-5 py-2 text-sm font-medium text-primary bg-accent rounded-sm hover:bg-accent-hover transition-colors shadow-sm"
           >
             Resume
-          </Link>
+          </button>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -86,9 +99,12 @@ const Navbar = () => {
             <button onClick={() => setIsDarkMode(!isDarkMode)} className="text-2xl hover:text-accent-hover">
               {isDarkMode ? <Sun /> : <Moon />}
             </button>
-            <Link to="/resume" onClick={toggleMenu} className="px-5 py-2 text-sm font-medium text-primary bg-accent rounded-sm text-center shadow-sm hover:bg-accent-hover">
+            <button
+              onClick={() => { downloadFile(`${API}/api/download/resume/pdf`, 'Prakhar_Agrawal_Resume.pdf'); toggleMenu(); }}
+              className="px-5 py-2 text-sm font-medium text-primary bg-accent rounded-sm text-center shadow-sm hover:bg-accent-hover"
+            >
               Download Resume
-            </Link>
+            </button>
           </div>
         </div>
       )}

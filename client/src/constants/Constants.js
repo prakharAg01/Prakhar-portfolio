@@ -17,15 +17,15 @@ export const PROJECTS_DATA = [
     githubUrl: "https://github.com/prakharAg01/asl-recognition"
   },
   {
-    title: "Signal Processing Dashboard",
-    description: "Web-based visualization tool for real-time DSP algorithms. Allows upload of raw audio/signals and plots Fourier transforms dynamically.",
-    techStack: ["Python", "Flask", "React", "D3.js"],
-    categories: ["Signal Processing", "Python", "Full-Stack"],
-    githubUrl: "#"
+    title: "City-Link Analyzer",
+    description: "Built a graph-based travel optimization system integrating Dijkstra, Floyd-Warshall, TSP, and MST with real-time traffic data (GraphHopper API), enabling analysis and visualization of 330+ city routes.",
+    techStack: ["Python", "Folium", "GraphHopper API", "NetworkX"],
+    categories: ["Python"],
+    githubUrl: "https://github.com/Aman018-gif/CityLinkAnalyzer"
   },
   {
     title: "CodeCampus - College Coding Platform",
-    description: "A highly scalable full-stack e-commerce platform rebuilt from a monolith into a modern Go and Node.js microservices architecture.",
+    description: "A highly scalable full-stack college coding platform. Implemented core features including user authentication, problem management, code submission with real-time status updates, and an integrated code editor.",
     techStack: ["JavaScript", "Node.js", "MongoDB", "React", "Tailwind CSS", "Express.js"],
     categories: ["Full-Stack"],
     githubUrl: "https://github.com/prakharAg01/coding_platform_jklu"
@@ -165,6 +165,6 @@ export const FOOTER_NAV = [
 export const TECHNICAL_INTERESTS = [
   { area: "Hardware", skills: "VLSI, FPGA, Raspberry-Pi, Verilog, Arduino" },
   { area: "Programming", skills: "Python, C" },
-  { area: "Intelligence", skills: "Signal Processing" },
+  { area: "Simulation", skills: "LtSpice, MATLAB" },
   { area: "Web Development", skills: "MERN Stack" },
 ];

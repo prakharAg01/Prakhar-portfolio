@@ -33,7 +33,7 @@ app.get('/api/health', (req, res) => {
 app.use('/api/contact', contactRouter)
 
 app.get('/api/download/resume/pdf', (req, res) => {
-  const filePath = path.join(__dirname, 'public', 'resume.pdf')
+  const filePath = path.join(__dirname, 'files', 'Prakhar_Agrawal_Resume.pdf')
   res.download(filePath, 'Prakhar_Agrawal_Resume.pdf', (err) => {
     if (err && !res.headersSent) {
       res.status(500).json({ message: 'Failed to download PDF' })
@@ -42,7 +42,7 @@ app.get('/api/download/resume/pdf', (req, res) => {
 })
 
 app.get('/api/download/resume/docx', (req, res) => {
-  const filePath = path.join(__dirname, 'public', 'resume.docx')
+  const filePath = path.join(__dirname, 'files', 'Prakhar_Agrawal_Resume.docx')
   res.download(filePath, 'Prakhar_Agrawal_Resume.docx', (err) => {
     if (err && !res.headersSent) {
       res.status(500).json({ message: 'Failed to download DOCX' })

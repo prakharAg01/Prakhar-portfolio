@@ -1,6 +1,19 @@
 import { MapPin, Mail, FileText, Download } from 'lucide-react';
 import { TECHNICAL_INTERESTS } from '../constants/Constants';
 
+const API = import.meta.env.VITE_API_BASE_URL || '';
+
+async function downloadFile(url, filename) {
+  const res = await fetch(url);
+  if (!res.ok) return;
+  const blob = await res.blob();
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
 export default function About() {
   return (
     <section id="about" className="px-6 md:px-12 lg:px-24 py-24 relative overflow-hidden bg-primary/5">
@@ -20,7 +33,7 @@ export default function About() {
             <div className="relative">
               <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-accent/30 shadow-xl ring-4 ring-accent/10">
                 <img
-                  src="/profile.jpg"
+                  src="/profile-photo.png"
                   alt="Prakhar Agrawal"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -56,21 +69,19 @@ export default function About() {
             <div className="w-full h-px bg-body/10" />
 
             <div className="flex gap-3 w-full">
-              <a
-                href="/resume.pdf"
-                download
+              <button
+                onClick={() => downloadFile(`${API}/api/download/resume/pdf`, 'Prakhar_Agrawal_Resume.pdf')}
                 className="flex items-center justify-center gap-2 px-4 py-2.5 bg-accent text-primary text-sm font-mono rounded-lg hover:opacity-90 transition-all w-full"
               >
                 <Download size={15} /> Resume (PDF)
-              </a>
+              </button>
 
-              <a
-                href="/resume.docx"
-                download
+              <button
+                onClick={() => downloadFile(`${API}/api/download/resume/docx`, 'Prakhar_Agrawal_Resume.docx')}
                 className="flex items-center justify-center gap-2 px-4 py-2.5 border border-accent/30 text-accent text-sm font-mono rounded-lg hover:bg-accent/5 transition-all w-full"
               >
                 <Download size={15} /> Resume (Word)
-              </a>
+              </button>
             </div>
           </div>
 
