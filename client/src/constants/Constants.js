@@ -24,7 +24,7 @@ export const PROJECTS_DATA = [
     githubUrl: "#"
   },
   {
-    title: "CodeCampus - Coding Platform for JKLU",
+    title: "CodeCampus - College Coding Platform",
     description: "A highly scalable full-stack e-commerce platform rebuilt from a monolith into a modern Go and Node.js microservices architecture.",
     techStack: ["JavaScript", "Node.js", "MongoDB", "React", "Tailwind CSS", "Express.js"],
     categories: ["Full-Stack"],
@@ -52,15 +52,8 @@ export const TIMELINE_DATA = [
     title: "AI Research Intern",
     subtitle: "LNMIIT, Jaipur",
     duration: "May 2025 : July 2025",
-    description: "Worked on a project titled Hardware implementation of Yoga Pose Recognition using Deep Learning.",
-  },
-  {
-    type: "Experience",
-    title: "Full-Stack Developer Intern",
-    subtitle: "Acme Tech Solutions",
-    duration: "Jun 2024 – Aug 2024",
-    description: "Built REST APIs in Node.js, designed React dashboards, and deployed containerised services on AWS.",
-  },
+    description: "Worked on a project titled Hardware implementation of ASL Recognition using Deep Learning on Raspberry Pi.",
+  }
 ];
 
 export const CERTIFICATIONS_DATA = [

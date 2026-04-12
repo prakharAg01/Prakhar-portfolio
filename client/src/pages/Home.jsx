@@ -48,7 +48,7 @@ export default function Home() {
           {/* Social Icons Section */}
           <div className="flex items-center gap-6 mt-8 animate-fade-up" style={{ animationDelay: '600ms' }}>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/prakharAg01"
               target="_blank"
               rel="noopener noreferrer"
               className="text-body hover:text-accent transition-colors duration-300"
