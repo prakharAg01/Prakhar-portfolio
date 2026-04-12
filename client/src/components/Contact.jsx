@@ -21,11 +21,11 @@ export default function Contact() {
         body: JSON.stringify(form),
       });
       const data = await res.json();
-      if (data.success) {
-        setStatus({ loading: false, success: data.message, error: '' });
+      if (res.ok) {
+        setStatus({ loading: false, success: 'Message sent! I\'ll get back to you soon.', error: '' });
         setForm({ name: '', email: '', message: '' });
       } else {
-        setStatus({ loading: false, success: '', error: data.message });
+        setStatus({ loading: false, success: '', error: data.message || 'Something went wrong.' });
       }
     } catch {
       setStatus({ loading: false, success: '', error: 'Could not connect to server. Please try again.' });
