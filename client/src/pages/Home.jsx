@@ -1,13 +1,11 @@
 import MainLayout from "../components/layout/mainlayout";
 import { useTypewriter } from "../hooks/useTypewriter";
-
-const ROLES = [
-  "Full-Stack Developer",
-  "UI/UX Enthusiast",
-  "Computer and Communications Engineer",
-  "Embedded Systems & IoT Learner",
-  "Exploring Signal Processing",
-];
+import About from "../components/About";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import Credentials from "../components/Credentials";
+import Contact from "../components/Contact";
+import { ROLES } from "../constants/Constants";
 
 
 export default function Home() {
@@ -29,13 +27,24 @@ export default function Home() {
             <span className="ml-1 inline-block w-[2px] h-[1.1em] bg-accent animate-blink rounded align-middle" />
           </div>
           <p className="max-w-xl text-sm md:text-base leading-relaxed text-body mt-6 animate-fade-up" style={{ animationDelay: '400ms' }}>
-            Computer and Communications Engineering student exploring the architecture of VLSI and FPGA systems and Digital Signal Processing. I am currently developing my expertise in Full-Stack development to build efficient, scalable solutions that bridge the gap from silicon to IoT ecosystems.
+            Computer and Communications Engineering student building robust full-stack applications and exploring the depths of Signal Processing & IoT.
           </p>
-          <button className="mt-10 px-8 py-4 font-mono text-sm text-accent bg-transparent border border-accent rounded hover:bg-accent hover:text-primary transition-colors duration-300 animate-fade-up" style={{ animationDelay: '500ms' }}>
-            Download CV
-          </button>
+          <div className="flex gap-4">
+            <button className="mt-10 px-8 py-4 font-mono text-sm text-primary bg-accent border border-accent rounded hover:bg-accent/80 hover:text-primary transition-colors duration-300 animate-fade-up" style={{ animationDelay: '500ms' }}>
+              Download CV
+            </button>
+            <button className="mt-10 px-8 py-4 font-mono text-sm text-accent bg-transparent border border-accent rounded hover:bg-accent/80 hover:text-primary transition-colors duration-300 animate-fade-up" style={{ animationDelay: '500ms' }}>
+              Let's Talk
+            </button>
+          </div>
+
         </div>
       </section>
+      <About />
+      <Skills />
+      <Projects />
+      <Credentials />
+      <Contact />
     </MainLayout>
   );
 }

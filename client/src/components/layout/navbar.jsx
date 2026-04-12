@@ -19,8 +19,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 w-full bg-primary/95 backdrop-blur-md shadow-sm border-b border-body/20 z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-        
-        <Link to="/" className="text-lg font-black text-heading tracking-tighter">
+
+        <Link
+          to="/"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="text-xl font-black text-heading tracking-tighter"
+        >
           Prakhar<span className="text-accent">.</span>Portfolio
         </Link>
 
@@ -28,24 +32,24 @@ const Navbar = () => {
           <a href="#about" className="hover:text-accent-hover transition-colors">About</a>
           <a href="#skills" className="hover:text-accent-hover transition-colors">Skills</a>
           <a href="#projects" className="hover:text-accent-hover transition-colors">Projects</a>
-          <a href="#timeline" className="hover:text-accent-hover transition-colors">Experience</a>
+          <a href="#credentials" className="hover:text-accent-hover transition-colors">Credentials</a>
           <a href="#contact" className="hover:text-accent-hover transition-colors">Contact</a>
         </div>
 
         {/* Action Buttons (Desktop) */}
         <div className="hidden md:flex items-center gap-4">
           {/* Dark Mode Toggle */}
-          <button 
+          <button
             onClick={() => setIsDarkMode(!isDarkMode)}
             className="p-2 rounded-full hover:bg-body/10 text-body transition-colors"
             aria-label="Toggle Dark Mode"
           >
             {isDarkMode ? <Sun /> : <Moon />}
           </button>
-          
+
           {/* Resume Button */}
-          <Link 
-            to="/resume" 
+          <Link
+            to="/resume"
             className="px-5 py-2 text-sm font-medium text-primary bg-accent rounded-sm hover:bg-accent-hover transition-colors shadow-sm"
           >
             Resume
@@ -53,7 +57,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Hamburger Button */}
-        <button 
+        <button
           className="md:hidden p-2 text-body hover:bg-body/10 rounded"
           onClick={toggleMenu}
         >
@@ -73,11 +77,11 @@ const Navbar = () => {
           <a href="#about" onClick={toggleMenu} className="text-heading font-medium hover:text-accent-hover">About</a>
           <a href="#skills" onClick={toggleMenu} className="text-heading font-medium hover:text-accent-hover">Skills</a>
           <a href="#projects" onClick={toggleMenu} className="text-heading font-medium hover:text-accent-hover">Projects</a>
-          <a href="#timeline" onClick={toggleMenu} className="text-heading font-medium hover:text-accent-hover">Experience</a>
+          <a href="#credentials" onClick={toggleMenu} className="text-heading font-medium hover:text-accent-hover">Credentials</a>
           <a href="#contact" onClick={toggleMenu} className="text-heading font-medium hover:text-accent-hover">Contact</a>
-          
+
           <div className="h-px w-full bg-body/20 my-2"></div>
-          
+
           <div className="flex justify-between items-center text-heading">
             <button onClick={() => setIsDarkMode(!isDarkMode)} className="text-2xl hover:text-accent-hover">
               {isDarkMode ? <Sun /> : <Moon />}

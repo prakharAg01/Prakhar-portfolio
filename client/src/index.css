@@ -1,16 +1,20 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   :root {
-    --color-bg-primary: hsl(225 15% 95%);
+    --color-bg-primary: hsl(225 60% 95%);
     --color-text-heading: hsl(225 68% 10%);
     --color-text-body: hsl(230 15% 40%);
-    --color-accent: hsl(179 93% 40%);
-    --color-accent-hover: hsl(179 93% 30%);
+    --color-accent: hsl(178.7 93.5% 40%);
+    --color-accent-hover: hsl(178.7 93.5% 50%);
   }
 
   .dark {
-    --color-bg-primary: hsl(225 66.7% 7.1%);
+    --color-bg-primary: hsl(225 60% 7%);
     --color-text-heading: hsl(225 15.4% 94.9%);
     --color-text-body: hsl(230.6 15.7% 60%);
     --color-accent: hsl(178.7 93.5% 70%);
