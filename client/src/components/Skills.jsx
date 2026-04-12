@@ -50,7 +50,7 @@ export default function Skills() {
                     {/* Progress Bar */}
                     <div className="w-full h-2.5 bg-body/10 rounded-full overflow-hidden mb-4">
                       <div 
-                        className={`h-full rounded-full bg-linear-to-r bg-accent transition-all duration-1000 ease-out`}
+                        className={`h-full rounded-full bg-linear-to-r bg-accent/75 transition-all duration-1000 ease-out`}
                         style={{ width: `${skill.level}%` }}
                       />
                     </div>

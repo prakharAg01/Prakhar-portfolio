@@ -14,7 +14,8 @@ export default function Contact() {
     e.preventDefault();
     setStatus({ loading: true, success: '', error: '' });
     try {
-      const res = await fetch('https://portfolio-chv3.vercel.app/api/contact', {
+      const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || '';
+      const res = await fetch(`${apiBaseUrl}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
@@ -55,7 +56,7 @@ export default function Contact() {
                 Let's talk about your next project.
               </h3>
               <p className="text-body text-base leading-relaxed">
-                I'm currently seeking a software engineering internship and open to new opportunities.
+                I'm currently seeking an web-development and VLSI internship and open to new opportunities.
                 Whether you have a question, a project proposal, or just want to say hi, I'll try my best to get back to you!
               </p>
             </div>
@@ -72,16 +73,6 @@ export default function Contact() {
                   <span className="font-mono text-sm break-all text-heading font-medium">prakhar.agrawal@email.com</span>
                 </div>
               </a>
-
-              <div className="flex items-center gap-4 text-body w-fit">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-sm">
-                  <MapPin size={20} className="text-accent" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-xs font-mono text-body/70 uppercase tracking-wider mb-0.5">Location</span>
-                  <span className="font-mono text-sm text-heading font-medium">Jaipur, Rajasthan, India</span>
-                </div>
-              </div>
 
             </div>
             <div className="pt-2">
