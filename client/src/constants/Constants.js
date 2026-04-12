@@ -14,24 +14,21 @@ export const PROJECTS_DATA = [
     description: "Real-time American Sign Language (ASL) alphabet recognition using MediaPipe and Random Forest, deployed on Raspberry Pi. Includes dataset preparation, landmark detection, model training, and live gesture prediction via webcam.",
     techStack: ["Python", "Raspberry Pi", "MediaPipe", "Random Forest"],
     categories: ["Python", "Machine Learning", "IoT"],
-    githubUrl: "https://github.com/prakharAg01/asl-recognition",
-    demoUrl: "#"
+    githubUrl: "https://github.com/prakharAg01/asl-recognition"
   },
   {
     title: "Signal Processing Dashboard",
     description: "Web-based visualization tool for real-time DSP algorithms. Allows upload of raw audio/signals and plots Fourier transforms dynamically.",
     techStack: ["Python", "Flask", "React", "D3.js"],
     categories: ["Signal Processing", "Python", "Full-Stack"],
-    githubUrl: "#",
-    demoUrl: "#"
+    githubUrl: "#"
   },
   {
     title: "CodeCampus - Coding Platform for JKLU",
     description: "A highly scalable full-stack e-commerce platform rebuilt from a monolith into a modern Go and Node.js microservices architecture.",
     techStack: ["JavaScript", "Node.js", "MongoDB", "React", "Tailwind CSS", "Express.js"],
     categories: ["Full-Stack"],
-    githubUrl: "https://github.com/prakharAg01/coding_platform_jklu",
-    demoUrl: "#"
+    githubUrl: "https://github.com/prakharAg01/coding_platform_jklu"
   }
 ];
 
@@ -70,7 +67,7 @@ export const CERTIFICATIONS_DATA = [
   {
     name: "C-Programming Course",
     organization: "Infosys Springboard",
-    logo: CodeXml ,
+    logo: CodeXml,
     url: "https://jklujaipur-my.sharepoint.com/:b:/g/personal/prakharagrawal_jklu_edu_in/IQDgQHMSule7RaX3Ahxhi-TaAYz8yrnkeiA-X5xkZoNHC2k?e=sRjcgL",
   },
   {
@@ -121,45 +118,46 @@ export const SKILLS_DATA = [
   {
     category: "Programming Languages",
     skills: [
-      { name: "Python", level: 70},
-      { name: "C", level: 80},
-      { name: "C++", level: 50},
+      { name: "Python", level: 70 },
+      { name: "C", level: 80 },
+      { name: "C++", level: 50 },
     ]
   },
   {
     category: "Hardware Description languages",
     skills: [
-      { name: "VHDL", level: 90},
-      { name: "Verilog", level: 80},
-      { name: "SystemVerilog", level: 65},
+      { name: "VHDL", level: 90 },
+      { name: "Verilog", level: 80 },
+      { name: "SystemVerilog", level: 65 },
     ]
   },
   {
     category: "Web Development",
     skills: [
-      { name: "React.js", level: 70},
-      { name: "Html", level: 70},
-      { name: "CSS", level: 60},
-      { name: "Javascript", level: 90},
-      { name: "Node.Js", level: 80},
-      { name: "Express.js", level: 75},
+      { name: "React.js", level: 70 },
+      { name: "Html", level: 70 },
+      { name: "CSS", level: 60 },
+      { name: "Javascript", level: 90 },
+      { name: "Node.Js", level: 80 },
+      { name: "Express.js", level: 75 },
     ]
   },
   {
     category: "Tools & Technologies",
     skills: [
-      { name: "Linux", level: 90},
-      { name: "LtSpice", level: 90},
-      { name: "FPGA", level: 80},
-      { name: "MATLAB", level: 85},
-      { name: "Arduino", level: 80},
+      { name: "Linux", level: 90 },
+      { name: "LtSpice", level: 90 },
+      { name: "FPGA", level: 80 },
+      { name: "MATLAB", level: 85 },
+      { name: "Arduino", level: 80 },
+      { name: "Raspberry-Pi", level: 70 },
     ]
   }
 ];
 
 export const SOCIAL_LINKS = [
   { name: "GitHub", url: "https://github.com/prakharAg01", icon: "FiGithub" },
-  { name: "LinkedIn", url: "https://linkedin.com/in/", icon: "FiLinkedin" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/prakhar-agrawal-1135352aa/", icon: "FiLinkedin" },
 ];
 
 export const FOOTER_NAV = [
@@ -172,7 +170,8 @@ export const FOOTER_NAV = [
 ];
 
 export const TECHNICAL_INTERESTS = [
-  { area: "Hardware", skills: "VLSI, FPGA, ESP32, Verilog" },
-  { area: "Full-Stack", skills: "MERN Stack, System Design" },
-  { area: "Intelligence", skills: "Signal Processing, Edge AI" },
+  { area: "Hardware", skills: "VLSI, FPGA, Raspberry-Pi, Verilog, Arduino" },
+  { area: "Programming", skills: "Python, C" },
+  { area: "Intelligence", skills: "Signal Processing" },
+  { area: "Web Development", skills: "MERN Stack" },
 ];

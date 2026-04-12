@@ -64,13 +64,13 @@ export default function Contact() {
             {/* Direct Contact Info */}
             <div className="space-y-6">
 
-              <a href="mailto:prakhar.agrawal@email.com" className="flex items-center gap-4 text-body hover:text-accent transition-colors group w-fit">
+              <a href="mailto:prakhar1234ag@gmail.com" className="flex items-center gap-4 text-body hover:text-accent transition-colors group w-fit">
                 <div className="w-12 h-12 rounded-full flex items-center justify-center group-hover:bg-accent/20 transition-colors shadow-sm">
                   <Mail size={20} className="text-accent" />
                 </div>
                 <div className="flex flex-col">
                   <span className="text-xs font-mono text-body/70 uppercase tracking-wider mb-0.5">Email</span>
-                  <span className="font-mono text-sm break-all text-heading font-medium">prakhar.agrawal@email.com</span>
+                  <span className="font-mono text-sm break-all text-heading font-medium">prakhar1234ag@gmail.com</span>
                 </div>
               </a>
 
@@ -88,7 +88,7 @@ export default function Contact() {
                   <FiGithub size={20} />
                 </a>
                 <a
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://www.linkedin.com/in/prakhar-agrawal-1135352aa/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 rounded-full bg-card border border-body/10 flex items-center justify-center text-body hover:text-accent hover:border-accent/30 hover:bg-accent/5 transition-all duration-300 shadow-sm"

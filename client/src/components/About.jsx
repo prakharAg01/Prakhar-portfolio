@@ -41,15 +41,15 @@ export default function About() {
 
             <div className="flex flex-row justify-center items-center gap-4 w-full">
               <div className="flex items-center gap-1 text-sm text-body">
-                <MapPin size={15}/>
+                <MapPin size={15} />
                 <span>Jaipur, India</span>
               </div>
               <a
-                href="mailto:prakhar.agrawal@email.com"
+                href="mailto:prakhar1234ag@gmail.com"
                 className="flex items-center gap-1 text-sm text-body hover:text-accent transition-colors"
               >
-                <Mail size={15}/>
-                <span className="break-all">prakhar.agrawal@email.com</span>
+                <Mail size={15} />
+                <span className="break-all">prakhar1234ag@gmail.com</span>
               </a>
             </div>
 
@@ -77,12 +77,11 @@ export default function About() {
           <div className="lg:col-span-8 space-y-8 animate-fade-up" style={{ animationDelay: '200ms' }}>
             <div className="space-y-5 text-base leading-relaxed text-body">
               <p>
-                I am a <span className="text-accent font-medium">Computer and Communication Engineer</span> driven by the challenge of building high-performance, optimized systems at the intersection of hardware and software.
+                I'm a Computer and Communications Engineering student focused on building practical tech solutions. I have experience in Python, C, and full-stack development using React Native and Node.js.
+
               </p>
               <p>
-                My expertise spans the full technical stack—from designing efficient{' '}
-                <span className="text-heading font-semibold">VLSI and FPGA-based hardware</span> to architecting scalable{' '}
-                <span className="text-heading font-semibold">MERN applications</span>. I specialize in bridging the gap between low-level hardware constraints and high-level software utility.
+                I'm currently strengthening my skills in data structures and problem-solving while exploring telecom and system design. My goal is to gain real-world experience through impactful projects and internships.
               </p>
             </div>
 
