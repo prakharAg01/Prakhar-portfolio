@@ -9,17 +9,6 @@ import { ROLES } from "../constants/Constants";
 
 const API = import.meta.env.VITE_API_BASE_URL || '';
 
-async function downloadCV() {
-  const res = await fetch(`${API}/api/download/resume/pdf`);
-  if (!res.ok) return;
-  const blob = await res.blob();
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = 'Prakhar_Agrawal_Resume.pdf';
-  a.click();
-  URL.revokeObjectURL(a.href);
-}
-
 // Import the icons
 import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 
@@ -46,9 +35,14 @@ export default function Home() {
           </p>
 
           <div className="flex gap-4">
-            <button onClick={downloadCV} className="mt-10 px-8 py-4 font-mono font-bold text-sm text-primary bg-accent border border-accent rounded hover:bg-accent/80 hover:text-primary transition-colors duration-300 animate-fade-up" style={{ animationDelay: '500ms' }}>
+            <a
+              href={`${API}/api/download/resume/pdf`}
+              download="Prakhar_Agrawal_Resume.pdf"
+              className="mt-10 px-8 py-4 font-mono font-bold text-sm text-primary bg-accent border border-accent rounded hover:bg-accent/80 hover:text-primary transition-colors duration-300 animate-fade-up inline-block text-center"
+              style={{ animationDelay: '500ms' }}
+            >
               Download CV
-            </button>
+            </a>
             <a
               href="#contact"
               className="mt-10 px-8 py-4 font-mono text-sm text-accent bg-transparent border border-accent rounded hover:bg-accent/80 hover:text-primary transition-colors duration-300 animate-fade-up inline-block text-center"

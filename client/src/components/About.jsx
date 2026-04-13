@@ -1,18 +1,7 @@
-import { MapPin, Mail, FileText, Download } from 'lucide-react';
+import { MapPin, Mail, Download } from 'lucide-react';
 import { TECHNICAL_INTERESTS } from '../constants/Constants';
 
 const API = import.meta.env.VITE_API_BASE_URL || '';
-
-async function downloadFile(url, filename) {
-  const res = await fetch(url);
-  if (!res.ok) return;
-  const blob = await res.blob();
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(a.href);
-}
 
 export default function About() {
   return (
@@ -69,19 +58,21 @@ export default function About() {
             <div className="w-full h-px bg-body/10" />
 
             <div className="flex gap-3 w-full">
-              <button
-                onClick={() => downloadFile(`${API}/api/download/resume/pdf`, 'Prakhar_Agrawal_Resume.pdf')}
-                className="flex items-center justify-center gap-2 px-4 py-2.5 bg-accent text-primary text-sm font-mono rounded-lg hover:opacity-90 transition-all w-full"
+              <a
+                href={`${API}/api/download/resume/pdf`}
+                download="Prakhar_Agrawal_Resume.pdf"
+                className="flex items-center justify-center gap-2 px-4 py-2.5 bg-accent text-primary text-sm font-mono rounded-lg hover:opacity-90 transition-all w-full text-center"
               >
                 <Download size={15} /> Resume (PDF)
-              </button>
+              </a>
 
-              <button
-                onClick={() => downloadFile(`${API}/api/download/resume/docx`, 'Prakhar_Agrawal_Resume.docx')}
-                className="flex items-center justify-center gap-2 px-4 py-2.5 border border-accent/30 text-accent text-sm font-mono rounded-lg hover:bg-accent/5 transition-all w-full"
+              <a
+                href={`${API}/api/download/resume/docx`}
+                download="Prakhar_Agrawal_Resume.docx"
+                className="flex items-center justify-center gap-2 px-4 py-2.5 border border-accent/30 text-accent text-sm font-mono rounded-lg hover:bg-accent/5 transition-all w-full text-center"
               >
                 <Download size={15} /> Resume (Word)
-              </button>
+              </a>
             </div>
           </div>
 

@@ -4,16 +4,6 @@ import { Sun, Moon } from 'lucide-react';
 
 const API = import.meta.env.VITE_API_BASE_URL || '';
 
-async function downloadFile(url, filename) {
-  const res = await fetch(url);
-  if (!res.ok) return;
-  const blob = await res.blob();
-  const a = document.createElement('a');
-  a.href = URL.createObjectURL(blob);
-  a.download = filename;
-  a.click();
-  URL.revokeObjectURL(a.href);
-}
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,12 +51,13 @@ const Navbar = () => {
           </button>
 
           {/* Resume Button */}
-          <button
-            onClick={() => downloadFile(`${API}/api/download/resume/pdf`, 'Prakhar_Agrawal_Resume.pdf')}
+          <a
+            href={`${API}/api/download/resume/pdf`}
+            download="Prakhar_Agrawal_Resume.pdf"
             className="px-5 py-2 text-sm font-medium text-primary bg-accent rounded-sm hover:bg-accent-hover transition-colors shadow-sm"
           >
             Resume
-          </button>
+          </a>
         </div>
 
         {/* Mobile Hamburger Button */}
@@ -99,12 +90,14 @@ const Navbar = () => {
             <button onClick={() => setIsDarkMode(!isDarkMode)} className="text-2xl hover:text-accent-hover">
               {isDarkMode ? <Sun /> : <Moon />}
             </button>
-            <button
-              onClick={() => { downloadFile(`${API}/api/download/resume/pdf`, 'Prakhar_Agrawal_Resume.pdf'); toggleMenu(); }}
+            <a
+              href={`${API}/api/download/resume/pdf`}
+              download="Prakhar_Agrawal_Resume.pdf"
+              onClick={toggleMenu}
               className="px-5 py-2 text-sm font-medium text-primary bg-accent rounded-sm text-center shadow-sm hover:bg-accent-hover"
             >
               Download Resume
-            </button>
+            </a>
           </div>
         </div>
       )}
