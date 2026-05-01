@@ -68,7 +68,7 @@ export default function About() {
 
               <a
                 href={`${API}/api/download/resume/docx`}
-                download="PrakharAgrawal_Resume.docx"
+                download="Prakhar_Agrawal_Resume.docx"
                 className="flex items-center justify-center gap-2 px-4 py-2.5 border border-accent/30 text-accent text-sm font-mono rounded-lg hover:bg-accent/5 transition-all w-full text-center"
               >
                 <Download size={15} /> Resume (Word)
