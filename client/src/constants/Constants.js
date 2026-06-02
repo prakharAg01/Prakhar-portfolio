@@ -105,6 +105,12 @@ export const CERTIFICATIONS_DATA = [
     logo: CodeXml,
     url: "https://jklujaipur-my.sharepoint.com/:b:/g/personal/prakharagrawal_jklu_edu_in/IQAqRyNJXkW6S7Dn9L1msngmATLRdLpuEAqf08zY3d-boZ8?e=0Dm43t",
   },
+  {
+    name: "Introduction to Drone Engineering",
+    organization: "Elecon Aerotech",
+    logo: RadioTower,
+    url: "https://jklujaipur-my.sharepoint.com/:b:/g/personal/prakharagrawal_jklu_edu_in/IQB5OTPZSoVQQ7hIn9nBOy1cAXjNRo1NmBHpnYfotUAOddE?e=gasXZ7",
+  },
 ];
 
 export const SKILLS_DATA = [
