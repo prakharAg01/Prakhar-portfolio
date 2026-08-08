@@ -29,7 +29,35 @@ export const PROJECTS_DATA = [
     techStack: ["JavaScript", "Node.js", "MongoDB", "React", "Tailwind CSS", "Express.js"],
     categories: ["Full-Stack"],
     githubUrl: "https://github.com/prakharAg01/coding_platform_jklu"
-  }
+  },
+  {
+    title: "4-bit ALU Design & Verification",
+    description: "Designed a 16-operation 4-bit ALU in Verilog supporting arithmetic and logic operations selected via a 4-bit control input, verified through behavioral simulation and deployed on Artix-7 FPGA hardware.",
+    techStack: ["Verilog", "Xilinx Vivado", "Artix-7 FPGA"],
+    categories: ["VLSI", "FPGA"],
+    githubUrl: "" // add your repo link
+  },
+  {
+    title: "64x8 FIFO Memory Design & Verification",
+    description: "Designed a 64-stage, 8-bit synchronous FIFO in SystemVerilog with full, empty, overflow, underflow, and threshold status flags, verified using a self-checking testbench with automated pass/fail tracking.",
+    techStack: ["SystemVerilog", "Xilinx Vivado"],
+    categories: ["VLSI", "FPGA"],
+    githubUrl: "" // add your repo link
+  },
+  {
+    title: "Traffic Light Controller — Verilog FSM",
+    description: "Designed a synchronous Moore FSM in Verilog to sequence a 4-way intersection through timed green and yellow phases, verified via RTL schematic synthesis in Vivado.",
+    techStack: ["Verilog", "Xilinx Vivado", "Artix-7 FPGA"],
+    categories: ["VLSI", "FPGA"],
+    githubUrl: "" // add your repo link
+  },
+  {
+    title: "QPSK Modulation & BER Performance Analysis",
+    description: "Derived and validated QPSK bit-error-rate performance analytically, simulated the transmitter-receiver chain in Scilab and MATLAB, and built a Simulink model to verify symbol recovery under AWGN noise.",
+    techStack: ["Scilab", "MATLAB", "Simulink"],
+    categories: ["Signal Processing"],
+    githubUrl: "" // add your repo link
+  },
 ];
 
 export const TIMELINE_DATA = [
@@ -49,7 +77,7 @@ export const TIMELINE_DATA = [
   },
   {
     type: "Experience",
-    title: "AI Research Intern",
+    title: "AI/ML Research Intern",
     subtitle: "LNMIIT, Jaipur",
     duration: "May 2025 : July 2025",
     description: "Worked on a project titled Hardware implementation of ASL Recognition using Deep Learning on Raspberry Pi.",
@@ -111,45 +139,50 @@ export const CERTIFICATIONS_DATA = [
     logo: RadioTower,
     url: "https://jklujaipur-my.sharepoint.com/:b:/g/personal/prakharagrawal_jklu_edu_in/IQB5OTPZSoVQQ7hIn9nBOy1cAXjNRo1NmBHpnYfotUAOddE?e=gasXZ7",
   },
+  {
+    name: "Digital System Design using open-source EDA tools",
+    organization: "Object Automation",
+    logo: Code,
+    url: "https://jklujaipur-my.sharepoint.com/:b:/g/personal/prakharagrawal_jklu_edu_in/IQCb5YnUzJTMQ7a_xrNLmqR0AUineBTwJJJjieofqJprs6s?e=cNGf0w"
+  }
 ];
 
 export const SKILLS_DATA = [
   {
+    category: "Hardware Description Languages",
+    skills: [
+      { name: "Verilog", level: 75 },
+      { name: "SystemVerilog", level: 60 },
+      { name: "VHDL", level: 80 },
+    ]
+  },
+  {
     category: "Programming Languages",
     skills: [
+      { name: "C", level: 75 },
       { name: "Python", level: 70 },
-      { name: "C", level: 80 },
+      { name: "JavaScript", level: 70 },
       { name: "C++", level: 50 },
     ]
   },
   {
-    category: "Hardware Description languages",
+    category: "Tools & Technologies",
     skills: [
-      { name: "VHDL", level: 90 },
-      { name: "Verilog", level: 80 },
-      { name: "SystemVerilog", level: 65 },
+      { name: "Xilinx Vivado", level: 75 },
+      { name: "MATLAB", level: 65 },
+      { name: "Scilab", level: 55 },
+      { name: "Arduino", level: 70 },
+      { name: "Raspberry Pi", level: 65 },
+      { name: "Linux", level: 60 },
     ]
   },
   {
     category: "Web Development",
     skills: [
       { name: "React.js", level: 70 },
-      { name: "Html", level: 70 },
-      { name: "CSS", level: 60 },
-      { name: "Javascript", level: 90 },
-      { name: "Node.Js", level: 80 },
-      { name: "Express.js", level: 75 },
-    ]
-  },
-  {
-    category: "Tools & Technologies",
-    skills: [
-      { name: "Linux", level: 90 },
-      { name: "LtSpice", level: 90 },
-      { name: "FPGA", level: 80 },
-      { name: "MATLAB", level: 85 },
-      { name: "Arduino", level: 80 },
-      { name: "Raspberry-Pi", level: 70 },
+      { name: "Node.js", level: 75 },
+      { name: "Express.js", level: 70 },
+      { name: "HTML/CSS", level: 65 },
     ]
   }
 ];
