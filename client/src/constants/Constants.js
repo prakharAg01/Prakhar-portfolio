@@ -141,10 +141,23 @@ export const CERTIFICATIONS_DATA = [
   },
   {
     name: "Digital System Design using open-source EDA tools",
-    organization: "Object Automation",
+    organization: "Object Automation System Solutions",
     logo: Code,
     url: "https://jklujaipur-my.sharepoint.com/:b:/g/personal/prakharagrawal_jklu_edu_in/IQCb5YnUzJTMQ7a_xrNLmqR0AUineBTwJJJjieofqJprs6s?e=cNGf0w"
+  },
+  {
+    name: "Adobe Hackathon 2026 - Participation",
+    organization: "Adobe",
+    logo: Code,
+    url: "https://jklujaipur-my.sharepoint.com/:b:/g/personal/prakharagrawal_jklu_edu_in/IQCxrizchX8OQprD2ADHlTdiAQ8CxnpZE3FTipXMTv0qTK0?e=9ISNkn"
+  },
+  {
+    name: "IEEE Chandicon 2026 - Presentation",
+    organization: "IEEE",
+    logo: RadioTower,
+    url: "https://jklujaipur-my.sharepoint.com/:b:/r/personal/prakharagrawal_jklu_edu_in/Documents/Certificates/Cerificate_IEEE_Chandicon_2026.pdf?d=w6119554d0f98444cb49f80e95ce0fb1b&csf=1&web=1&e=4F5p65"
   }
+
 ];
 
 export const SKILLS_DATA = [
